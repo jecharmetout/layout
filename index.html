@@ -15,8 +15,9 @@
 	for(var i = 0; i < elemsArr.length; i++){
 		console.log(elemsArr[i]);
 	}
-		var userElem = prompt("Enter elem name?");
-			if(userElem == elemsArr[i]){
+	var userElem = prompt("Enter elem name?");
+        for(var i = 0; i < elemsArr.length; i++){
+			   if(userElem == elemsArr[i]){
 				var elem = document.createElement(userElem);
 				document.body.appendChild(elem);
 				var content = prompt("Enter elem content?");
@@ -24,6 +25,10 @@
 			}else{
 				alert("Check that the value entered is correct");
 			}
+				
+		}
+
+		
     </script>
 </body>
 
