@@ -12,21 +12,23 @@
 	
 	var elemsArr = ["h1", "h2", "h3", "p", "div", "header", "footer", "span", "main", "aside"];
 	 
-	for(var i = 0; i < elemsArr.length; i++){
-		console.log(elemsArr[i]);
-	}
-	var userElem = prompt("Enter elem name?");
+		var userElem = prompt("Enter elem name?");
+		var correctElem = false;
         for(var i = 0; i < elemsArr.length; i++){
-			   if(userElem == elemsArr[i]){
-				var elem = document.createElement(userElem);
-				document.body.appendChild(elem);
-				var content = prompt("Enter elem content?");
-				elem.textContent = content;
-			}else{
-				alert("Check that the value entered is correct");
+			if(userElem === elemsArr[i]){
+				correctElem = true;
 			}
-				
 		}
+		 if(correctElem){
+			var elem = document.createElement(userElem);
+			document.body.appendChild(elem);
+			var content = prompt("Enter elem content?");
+			elem.textContent = content;
+		}else{
+			alert("Check that the value entered is correct");
+		}
+				
+		
 
 		
     </script>
